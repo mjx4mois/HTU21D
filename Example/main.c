@@ -28,7 +28,7 @@ Data Stack size         : 512
 #include <math.h>
 
 
-#include "SENSOR_HTU21D.h"
+#include <SENSOR_HTU21D.h>
 
 // I2C Bus functions
 #include <i2c.h>
@@ -303,10 +303,9 @@ lcd_init(16);
 // Global enable interrupts
 #asm("sei")
 
-while (1)
-      {
-      // Place your code here          
- 	EXAMPLE_HTU21D();       
-                    
-      }
+	while (1)
+	{
+		// Place your code here          
+		EXAMPLE_HTU21D();                         
+	}
 }
